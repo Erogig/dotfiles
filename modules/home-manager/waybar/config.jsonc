@@ -1,0 +1,88 @@
+// -*- mode: jsonc -*-
+{
+
+    "height": 35,
+    "spacing": 4,
+
+    "exclusive":false,
+    "layer":"overlay",
+    "start_hidden":true,
+
+    "reload_style_on_change":true,
+
+    "modules-left": [],
+    "modules-center": [],
+    "modules-right": ["tray", "custom/updates", "idle_inhibitor", "pulseaudio", "battery", "custom/power"],
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 8
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-full": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        //"format-plugged": "{capacity}% ",
+        "format-plugged": "󰂄",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"] 
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        //"format": "{icon} {volume}% {format_source}",
+        "format": "{icon} {volume}%",
+        //"format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": "󰖁 {format_source}",
+        //"format-source": "{volume}% ",
+        //"format-source": "",
+        //"format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "hyprctl dispatch exec [float] flatpak run com.saivert.pwvucontrol"
+    },
+    "custom/power": {
+        "format" : "⏻",
+		"tooltip": false,
+		"menu": "on-click",
+		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+		"menu-actions": {
+			"shutdown": "systemctl poweroff",
+			"reboot": "systemctl reboot",
+			"suspend": "systemctl suspend",
+			"hibernate": "systemctl hibernate"
+		}
+    },
+    "custom/updates": {
+        "format": "{} {icon}",
+        "return-type": "json",
+        "format-icons": {
+            "has-updates": "󱍷",
+            "updated": "󰂪"
+        },
+        "exec-if": "which waybar-module-pacman-updates",
+        "exec": "waybar-module-pacman-updates --interval-seconds 300 --network-interval-seconds 3600"
+    }
+}

@@ -1,0 +1,42 @@
+// -*- mode: jsonc -*-
+[{
+    "name":"Laptop",
+    "exclusive":false,
+    "layer":"overlay",
+    "passthrough":true,
+    "start_hidden":true,
+
+    "reload_style_on_change":true,
+
+    "output":"eDP-1",
+
+    "modules-left": [],
+    "modules-center": ["clock"],
+    "modules-right": [],
+
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    }
+},
+{
+    "name":"Other",
+    "exclusive":false,
+    "layer":"overlay",
+    "passthrough":true,
+    "start_hidden":true,
+
+    "reload_style_on_change":true,
+
+    "output":"!eDP-1",
+
+    "modules-left": [],
+    "modules-center": ["clock"],
+    "modules-right": [],
+
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    }
+}
+]

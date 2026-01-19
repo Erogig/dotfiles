@@ -1,0 +1,108 @@
+@import "../Colours/colours.css";
+
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: "AdwaitaMono Nerd Font Propo";
+    font-size: 13px;
+}
+
+window#waybar {
+    all:unset;
+}
+/*
+.modules-left {
+    padding:8px;
+    margin: 5 5 5 0;
+    border-radius:16px;
+    background: alpha(@base,.95);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
+}
+.modules-center {
+    padding:8px;
+    margin: 5 5 5 0;
+    border-radius:16px;
+    background: alpha(@base,.95);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
+}*/
+.modules-right {
+    padding:8px;
+    margin: 5 5 5 0; 
+    border-radius:16px;
+    background: alpha(@base,.95);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
+}
+
+#battery,
+#pulseaudio,
+#tray,
+#custom-power,
+#custom-updates,
+#idle_inhibitor {
+    padding: 5 7px;
+    border-radius: 15;
+    background-color: @surface0;
+    color: @text;
+}
+
+#window {
+    margin: 0 4px;
+}
+
+#battery {
+    color: @text;
+}
+
+#battery.charging, #battery.plugged {
+    color: @green;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+#battery.critical:not(.charging) {
+    color: @red;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#pulseaudio {
+    color: @text;
+}
+
+#tray {
+
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: @red;
+}
+
+#idle_inhibitor {
+    /*padding: 5 12 5 6;*/
+}
+
+#idle_inhibitor.activated {
+    background-color: @peach;
+    color: @surface0;
+}
+
+#custom-power {
+    /* padding: 5 8 5 6; */
+}
+
+#custom-updates {
+    /* padding: 5 10 5 6; */
+}

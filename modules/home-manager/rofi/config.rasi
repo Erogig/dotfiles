@@ -1,0 +1,6 @@
+@import "catppuccin-custom"
+
+configuration {
+  show-icons: true;
+  terminal: "kitty";
+}

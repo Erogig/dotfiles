@@ -1,0 +1,12 @@
+
+@import "catppuccin-frappe"
+
+* {
+    bg0:    @base;
+    bg1:    @surface0;
+    bg3:    @peach;
+    fg2:    @text;
+    fg3:    @overlay1;
+}
+
+@import "rounded-common.rasi"
