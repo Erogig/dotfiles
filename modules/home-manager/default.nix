@@ -8,4 +8,5 @@
     waybar = import ./waybar/waybar.nix;
     hyprpaper = import ./hyprpaper/hyprpaper.nix;
     kitty = import ./kitty/kitty.nix;
+    nvim = import ./nvim/nvim.nix;
 }
