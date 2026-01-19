@@ -66,7 +66,6 @@
   #
   #  /etc/profiles/per-user/erogig/etc/profile.d/hm-session-vars.sh
   #
-    home.shell.enableFishIntegration = true;
 
   # Let Home Manager install and manage itself.
     programs.home-manager.enable = true;
