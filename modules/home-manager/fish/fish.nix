@@ -3,12 +3,15 @@
 {
 programs.fish = {
     enable = true;
+    shellAbbrs = {
+        cl = "clear";
+        ls = "ls -Ah";
+        ll = "ls -Ahl";
+        matrix = "unimatrix -af -s 97 -l gGkkkSss";
+        ff = "fastfetch";
+        };
     };
 
     home.shell.enableFishIntegration = true;
-
-    xdg.configFile."fish/config.fish" = {source = ./../fish/config.fish; force = true;};
-    xdg.configFile."fish/fish_plugins" = {source = ./../fish/fish_plugins; force = true;};
-    xdg.configFile."fish/functions" = {source = ./../fish/functions; force = true;};
-    xdg.configFile."fish/themes" = {source = ./../fish/themes; force = true;};
+    home.file."${config.xdg.configHome}/fish/functions" = {source = ./../fish/functions;};
 }
