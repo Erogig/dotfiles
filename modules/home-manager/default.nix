@@ -9,4 +9,5 @@
     hyprpaper = import ./hyprpaper/hyprpaper.nix;
     kitty = import ./kitty/kitty.nix;
     nvim = import ./nvim/nvim.nix;
+    vesktop = import ./vesktop/vesktop.nix;
 }
