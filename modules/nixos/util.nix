@@ -3,5 +3,6 @@
 {
 environment.systemPackages = [
     pkgs.killall
+    pkgs.fastfetch
 ];
 }
