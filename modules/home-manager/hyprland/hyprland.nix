@@ -6,10 +6,8 @@ wayland.windowManager.hyprland = {
     package = null;
     portalPackage = null;
 
-    extraConfig = builtins.readFile ./hyprland.conf;
+    extraConfig = "source = ./hyprland/hyprland.conf";
     };
-
-    
 
     xdg.configFile."hypr/hyprland" = { source = ./../hyprland; force = true; };
 }
