@@ -1,5 +1,5 @@
 
-require "plugins/_catppuccin"
+-- require "plugins/_catppuccin"
 require "plugins/_lsp"
 require "plugins/_tree_sitter"
 require "plugins/_coq"

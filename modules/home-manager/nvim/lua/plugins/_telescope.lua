@@ -3,7 +3,7 @@ vim.pack.add({
     { src = "https://github.com/nvim-lua/plenary.nvim" },
     { src = "https://github.com/nvim-telescope/telescope.nvim" },
     { src = "https://github.com/nvim-telescope/telescope-fzy-native.nvim" },
-    { src = "https://github.com/kkharji/sqlite.lua" },
+    -- { src = "https://github.com/kkharji/sqlite.lua" },
     { src = "https://github.com/danielfalk/smart-open.nvim"},
 })
 

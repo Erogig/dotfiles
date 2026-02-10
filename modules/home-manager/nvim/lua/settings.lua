@@ -19,4 +19,4 @@ o.clipboard = 'unnamedplus'
 o.ignorecase = true
 o.smartcase = true
 
-vim.o.autochdir = true
+-- vim.o.autochdir = true
