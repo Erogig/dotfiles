@@ -1,4 +1,4 @@
-@import "../Colours/colours.css";
+/* @import "../Colours/colours.css"; */
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
@@ -28,7 +28,7 @@ window#waybar {
     padding:8px;
     margin: 5 5 5 0; 
     border-radius:16px;
-    background: alpha(@base,.95);
+    background: alpha(@base00,.95);
     box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
 }
 
@@ -40,8 +40,8 @@ window#waybar {
 #idle_inhibitor {
     padding: 5 7px;
     border-radius: 15;
-    background-color: @surface0;
-    color: @text;
+    background-color: @base01;
+    color: @base05;
 }
 
 #window {
@@ -49,11 +49,11 @@ window#waybar {
 }
 
 #battery {
-    color: @text;
+    color: @base05;
 }
 
 #battery.charging, #battery.plugged {
-    color: @green;
+    color: @base05;
 }
 
 @keyframes blink {
@@ -65,7 +65,7 @@ window#waybar {
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    color: @red;
+    color: @base09;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
@@ -74,7 +74,7 @@ window#waybar {
 }
 
 #pulseaudio {
-    color: @text;
+    color: @base05;
 }
 
 #tray {
@@ -87,7 +87,7 @@ window#waybar {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: @red;
+    background-color: @base09;
 }
 
 #idle_inhibitor {
@@ -95,8 +95,8 @@ window#waybar {
 }
 
 #idle_inhibitor.activated {
-    background-color: @peach;
-    color: @surface0;
+    background-color: @base02;
+    color: @base05;
 }
 
 #custom-power {

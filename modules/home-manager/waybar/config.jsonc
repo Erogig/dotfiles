@@ -12,7 +12,7 @@
 
     "modules-left": [],
     "modules-center": [],
-    "modules-right": ["tray", "custom/updates", "idle_inhibitor", "pulseaudio", "battery", "custom/power"],
+    "modules-right": ["tray", "idle_inhibitor", "pulseaudio", "battery", "custom/power"],
 
     "idle_inhibitor": {
         "format": "{icon}",
@@ -74,15 +74,15 @@
 			"suspend": "systemctl suspend",
 			"hibernate": "systemctl hibernate"
 		}
-    },
-    "custom/updates": {
-        "format": "{} {icon}",
-        "return-type": "json",
-        "format-icons": {
-            "has-updates": "󱍷",
-            "updated": "󰂪"
-        },
-        "exec-if": "which waybar-module-pacman-updates",
-        "exec": "waybar-module-pacman-updates --interval-seconds 300 --network-interval-seconds 3600"
     }
+    // "custom/updates": {
+    //     "format": "{} {icon}",
+    //     "return-type": "json",
+    //     "format-icons": {
+    //         "has-updates": "󱍷",
+    //         "updated": "󰂪"
+    //     },
+    //     "exec-if": "which waybar-module-pacman-updates",
+    //     "exec": "waybar-module-pacman-updates --interval-seconds 300 --network-interval-seconds 3600"
+    // }
 }
