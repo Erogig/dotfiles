@@ -11,4 +11,5 @@
     nvim = import ./nvim;
     vesktop = import ./vesktop;
     dunst = import ./dunst;
+    nm = import ./networkmanager;
 }
