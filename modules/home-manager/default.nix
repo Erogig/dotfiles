@@ -14,4 +14,5 @@
     nm = import ./networkmanager;
     stylix = import ./stylix;
     fonts = import ./fonts;
+    librewolf = import ./librewolf;
 }
