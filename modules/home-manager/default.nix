@@ -12,4 +12,6 @@
     vesktop = import ./vesktop;
     dunst = import ./dunst;
     nm = import ./networkmanager;
+    stylix = import ./stylix;
+    fonts = import ./fonts;
 }

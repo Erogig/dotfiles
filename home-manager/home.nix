@@ -14,6 +14,8 @@
     homeMods.vesktop
     homeMods.dunst
     homeMods.nm
+    homeMods.stylix
+    homeMods.fonts
     ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.

@@ -1,10 +1,10 @@
 /* @import "../Colours/colours.css"; */
 
-* {
-    /* `otf-font-awesome` is required to be installed for icons */
-    font-family: "AdwaitaMono Nerd Font Propo";
-    font-size: 13px;
-}
+/* * { */
+/*     `otf-font-awesome` is required to be installed for icons */
+/*     font-family: "AdwaitaMono Nerd Font Propo"; */
+/*     font-size: 13px; */
+/* } */
 
 window#waybar {
     all:unset;

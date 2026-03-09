@@ -1,7 +1,19 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
-    programs.waybar.enable = true;
-    xdg.configFile."waybar" = { source = ./../waybar; force = true; };
-    stylix.targets.waybar.addCss = false;
+    programs.waybar = {
+        enable = true;
+        settings = builtins.fromJSON (builtins.readFile ./config.json);
+        style = builtins.readFile ./style.css;
+    };
+
+    stylix.targets.waybar = {
+        fonts.override = { 
+            monospace = {
+                package = pkgs.nerd-fonts.noto;
+                name = "NotoSans Nerd Font Propo";
+            };
+    };
+        addCss = false;
+    };
 }
