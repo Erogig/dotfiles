@@ -17,5 +17,5 @@
     librewolf = import ./librewolf;
     btop = import ./btop;
     cursor = import ./cursor;
-    easyeffects = import ./easyeffects;
+    audio = import ./audio;
 }
