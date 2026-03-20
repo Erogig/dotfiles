@@ -10,6 +10,7 @@
             "middlemouse.paste" = false;
             "browser.tabs.closeWindowWithLastTab" = false;
             "browser.startup.homepage" = "https://ha.erogig.net?kiosk";
+            "privacy.clearOnShutdown_v2.cookiesAndStorage" = false;
         };
         # https://mozilla.github.io/policy-templates/#extensionsettings
         policies = {
