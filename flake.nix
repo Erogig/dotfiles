@@ -22,14 +22,14 @@
         };
     };
 
-    outputs = { self, nixpkgs, home-manager, stylix, nixos-hardware, ... }@inputs: {
+    outputs = { self, nixpkgs, stylix, nixos-hardware, ... }@inputs: {
         # use "nixos", or your hostname as the name of the configuration
         # it's a better practice than "default" shown in the video
         nixosModules = import ./modules/nixos;
         homeManagerModules = import ./modules/home-manager;
 
         nixosConfigurations.sidhe = nixpkgs.lib.nixosSystem {
-            specialArgs = {inherit inputs; nixMods = self.nixosModules; homeMods = self.homeManagerModules; };
+            specialArgs = {inherit inputs; nixosModules = self.nixosModules; homeManagerModules = self.homeManagerModules; };
             modules = [
                 stylix.nixosModules.stylix
                 ./nixos/configuration.nix
