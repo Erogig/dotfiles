@@ -16,4 +16,5 @@
     fonts = import ./fonts;
     librewolf = import ./librewolf;
     btop = import ./btop;
+    cursor = import ./cursor;
 }
