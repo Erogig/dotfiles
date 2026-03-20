@@ -19,6 +19,7 @@
         util
         stylix
         nautilus
+        steam
         ] ++ [
         ./hardware-configuration.nix
         ../home-manager/home-manager.nix
