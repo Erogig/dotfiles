@@ -7,7 +7,7 @@
 {
     imports = with nixosModules; [
         bootloader
-        display-manager
+        greetd
         hyprland
         locale
         networking

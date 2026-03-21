@@ -1,7 +1,7 @@
 
 {
     bootloader = import ./bootloader.nix;
-    display-manager = import ./display-manager.nix;
+    greetd = import ./greetd.nix;
     hyprland = import ./hyprland.nix;
     locale = import ./locale.nix;
     networking = import ./networking.nix;
