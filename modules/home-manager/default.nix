@@ -19,4 +19,5 @@
     cursor = import ./cursor;
     audio = import ./audio;
     wireplumber = import ./wireplumber;
+    gh = import ./gh;
 }
