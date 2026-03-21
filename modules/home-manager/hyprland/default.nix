@@ -9,5 +9,8 @@ wayland.windowManager.hyprland = {
     extraConfig = "source = ./hyprland/hyprland.conf";
     };
 
-    xdg.configFile."hypr/hyprland" = { source = ./../hyprland; force = true; };
+    xdg.configFile."hypr/hyprland" = {
+        source = ./../hyprland;
+        force = true; 
+    };
 }

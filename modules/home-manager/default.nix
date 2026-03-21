@@ -18,4 +18,5 @@
     btop = import ./btop;
     cursor = import ./cursor;
     audio = import ./audio;
+    wireplumber = import ./wireplumber;
 }
