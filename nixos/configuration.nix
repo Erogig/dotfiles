@@ -20,6 +20,7 @@
         stylix
         nautilus
         steam
+        pam
         ] ++ [
         ./hardware-configuration.nix
         ../home-manager/home-manager.nix

@@ -14,4 +14,5 @@
     stylix = import ./stylix.nix;
     nautilus = import ./nautilus.nix;
     steam = import ./steam.nix;
+    pam = import ./pam.nix;
 }

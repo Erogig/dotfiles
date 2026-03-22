@@ -20,4 +20,5 @@
     audio = import ./audio;
     wireplumber = import ./wireplumber;
     gh = import ./gh;
+    hyprlock = import ./hyprlock;
 }
