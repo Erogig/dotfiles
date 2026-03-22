@@ -22,4 +22,5 @@
     gh = import ./gh;
     hyprlock = import ./hyprlock;
     hypridle = import ./hypridle;
+    hyprpolkitagent = import ./hyprpolkitagent;
 }
