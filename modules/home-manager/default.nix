@@ -27,4 +27,5 @@
     sway-audio-idle-inhibit = import ./sway-audio-idle-inhibit;
     syshud = import ./syshud;
     hyprshot = import ./hyprshot;
+    clipse = import ./clipse;
 }

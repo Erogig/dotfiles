@@ -29,6 +29,7 @@
         sway-audio-idle-inhibit
         syshud
         hyprshot
+        clipse
     ];
     # Home Manager needs a bit of information about you and the paths it should
     # manage.

@@ -12,5 +12,6 @@ wayland.windowManager.hyprland = {
     xdg.configFile."hypr/hyprland" = {
         source = ./../hyprland;
         force = true; 
+        recursive = true;
     };
 }
