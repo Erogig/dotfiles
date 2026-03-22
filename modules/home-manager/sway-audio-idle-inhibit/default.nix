@@ -16,9 +16,9 @@
         };
 
         Service = {
-            Type = "simple";
+            Type = "exec";
             ExecStart = "${lib.getExe pkgs.sway-audio-idle-inhibit}";
-            Restart = "on-failure";
+            Restart = "always";
         };
 
         Install = {
