@@ -21,4 +21,5 @@
     wireplumber = import ./wireplumber;
     gh = import ./gh;
     hyprlock = import ./hyprlock;
+    hypridle = import ./hypridle;
 }
