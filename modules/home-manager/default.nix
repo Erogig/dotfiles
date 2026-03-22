@@ -24,4 +24,5 @@
     hypridle = import ./hypridle;
     hyprpolkitagent = import ./hyprpolkitagent;
     batsignal = import ./batsignal;
+    sway-audio-idle-inhibit = import ./sway-audio-idle-inhibit;
 }

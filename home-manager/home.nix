@@ -26,6 +26,7 @@
         hypridle
         hyprpolkitagent
         batsignal
+        sway-audio-idle-inhibit
     ];
     # Home Manager needs a bit of information about you and the paths it should
     # manage.
