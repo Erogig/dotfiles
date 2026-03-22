@@ -1,9 +1,10 @@
 { pkgs, ... }:
 
 {
-environment.systemPackages = [
-    pkgs.killall
-    pkgs.fastfetch
-    pkgs.libnotify
+environment.systemPackages = with pkgs; [
+    fastfetch
+    libnotify
+    brightnessctl
+    playerctl
     ];
 }
