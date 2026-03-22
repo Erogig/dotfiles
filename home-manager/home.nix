@@ -25,6 +25,7 @@
         hyprlock
         hypridle
         hyprpolkitagent
+        batsignal
     ];
     # Home Manager needs a bit of information about you and the paths it should
     # manage.

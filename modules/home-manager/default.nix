@@ -23,4 +23,5 @@
     hyprlock = import ./hyprlock;
     hypridle = import ./hypridle;
     hyprpolkitagent = import ./hyprpolkitagent;
+    batsignal = import ./batsignal;
 }
