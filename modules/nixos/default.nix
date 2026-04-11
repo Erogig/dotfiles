@@ -15,4 +15,5 @@
     nautilus = import ./nautilus.nix;
     steam = import ./steam.nix;
     pam = import ./pam.nix;
+    wireguard = import ./wireguard.nix;
 }

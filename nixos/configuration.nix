@@ -21,6 +21,7 @@
         nautilus
         steam
         pam
+        wireguard
         ] ++ [
         ./hardware-configuration.nix
         ../home-manager/home-manager.nix
