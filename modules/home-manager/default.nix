@@ -28,4 +28,5 @@
     syshud = import ./syshud;
     hyprshot = import ./hyprshot;
     clipse = import ./clipse;
+    kdeconnect = import ./kdeconnect;
 }
