@@ -3,6 +3,9 @@
 {
     programs.librewolf = {
         enable = true;
+        nativeMessagingHosts = [
+            pkgs.tridactyl-native
+        ];
         settings = {
             "privacy.resistFingerprinting" = false;
             "browser.toolbars.bookmarks.visibility" = "never";
@@ -12,7 +15,8 @@
             "browser.startup.homepage" = "https://ha.erogig.net?kiosk";
             "privacy.clearOnShutdown_v2.cookiesAndStorage" = false;
         };
-        # https://mozilla.github.io/policy-templates/#extensionsettings
+        # https://firefox-admin-docs.mozilla.org/reference/policies
+        # ToDo https://github.com/bitbloxhub/nixos-config/blob/4c0aa9afdd878ba5542a7176d8a69e836aa944ac/modules/firefox/darkreader.nix
         policies = {
             ExtensionSettings = {
                 "tridactyl.vim@cmcaine.co.uk" = {
@@ -34,15 +38,23 @@
                     private_browsing = true;
                 };
             };
+            "3rdparty".Extensions = {
+                "uBlock0@raymondhill.net".adminSettings = builtins.fromJSON( builtins.readFile ./ublock.txt );
+            };
         };
         profiles.default = {
             id = 0;
             extensions.force = true;
         };
     };
+
     stylix.targets.librewolf = {
         profileNames = [ "default" ];
         colorTheme.enable = true;
     };
-    home.packages = [ pkgs.tridactyl-native ];
+
+    xdg.configFile."tridactyl/tridactylrc" = {
+        source = ./tridactylrc;
+        force = true;
+    };
 }
