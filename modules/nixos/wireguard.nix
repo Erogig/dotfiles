@@ -19,6 +19,10 @@
                 configFile = "/secrets/vpn/Sidhe_Switzerland.conf";
                 autostart = false;
             };
+            Esek = {
+                configFile = "/secrets/vpn/Sidhe_Esek.conf";
+                autostart = false;
+            };
         };
     };
 }
