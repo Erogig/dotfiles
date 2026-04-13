@@ -30,4 +30,6 @@
     clipse = import ./clipse;
     kdeconnect = import ./kdeconnect;
     bitwarden = import ./bitwarden;
+    mpd = import ./mpd;
+    rmpc = import ./rmpc;
 }

@@ -12,18 +12,18 @@
     header_background_color: None,
     modal_background_color: None,
     modal_backdrop: false,
-    preview_label_style: (fg: "#ef9f76"),
-    preview_metadata_group_style: (fg: "#ef9f76", modifiers: "Bold"),
+    preview_label_style: (fg: "yellow"),
+    preview_metadata_group_style: (fg: "yellow", modifiers: "Bold"),
     tab_bar: (
         enabled: true,
-        active_style: (fg: "black", bg: "#ef9f76", modifiers: "Bold"),
+        active_style: (fg: "black", bg: "blue", modifiers: "Bold"),
         inactive_style: (),
     ),
-    highlighted_item_style: (fg: "#ef9f76", modifiers: "Bold"),
-    current_item_style: (fg: "black", bg: "#ef9f76", modifiers: "Bold"),
-    borders_style: (fg: "#ef9f76"),
-    highlight_border_style: (fg: "#ef9f76"),
-    symbols: (song: "🎵", dir: "📁", playlist: "🎼", marker: "\u{e0b0}"),
+    highlighted_item_style: (fg: "blue", modifiers: "Bold"),
+    current_item_style: (fg: "black", bg: "blue", modifiers: "Bold"),
+    borders_style: (fg: "blue"),
+    highlight_border_style: (fg: "blue"),
+    symbols: (song: "", dir: "", playlist: "", marker: "\u{e0b0}"),
     /*symbols: (
         song: "S",
         dir: "D",
@@ -44,14 +44,14 @@
     progress_bar: (
         symbols: ["█", "█", "█", "█", "█"],
         track_style: (fg: "black"),
-        elapsed_style: (fg: "#ef9f76"),
-        thumb_style: (fg: "#ef9f76"),
+        elapsed_style: (fg: "blue"),
+        thumb_style: (fg: "blue", bg: "#1e2030"),
     ),
     scrollbar: (
         symbols: ["│", "█", "▲", "▼"],
         track_style: (),
         ends_style: (),
-        thumb_style: (fg: "#ef9f76"),
+        thumb_style: (fg: "blue"),
     ),
     song_table_format: [
         (
@@ -116,10 +116,10 @@
                     )
                 ],
                 right: [
-                    (kind: Property(Widget(ScanStatus)), style: (fg: "#ef9f76")),
-                    (kind: Text("Volume: "), style: (fg: "#ef9f76", modifiers: "Bold")),
-                    (kind: Property(Status(Volume)), style: (fg: "#ef9f76")),
-                    (kind: Text("%"), style: (fg: "#ef9f76", modifiers: "Bold")),
+                    (kind: Property(Widget(ScanStatus)), style: (fg: "blue")),
+                    (kind: Text("Volume: "), style: (fg: "blue", modifiers: "Bold")),
+                    (kind: Property(Status(Volume)), style: (fg: "blue")),
+                    (kind: Text("%"), style: (fg: "blue", modifiers: "Bold")),
                 ]
             ),
             (
@@ -132,8 +132,8 @@
                     (kind: Text(" kbps)")),
                 ],
                 center: [
-                    (kind: Property(Song(Artist)), style: (fg: "#ef9f76", modifiers: "Bold"),
-                        default: (kind: Text("Unknown"), style: (fg: "#ef9f76", modifiers: "Bold")),
+                    (kind: Property(Song(Artist)), style: (fg: "yellow", modifiers: "Bold"),
+                        default: (kind: Text("Unknown"), style: (fg: "yellow", modifiers: "Bold")),
                     ),
                     (kind: Text(" - ")),
                     (kind: Property(Song(Album)),
@@ -183,6 +183,6 @@
     ),
     cava: (
         bg_color: None,
-        bar_color: Single("#f2d5cf")
+        bar_color: Single("yellow")
     ),
 )

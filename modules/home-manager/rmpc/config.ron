@@ -2,13 +2,13 @@
 #![enable(unwrap_newtypes)]
 #![enable(unwrap_variant_newtypes)]
 (
-    address: "~/.config/mpd/socket",
+    address: "127.0.0.1:6600",
     password: None,
     theme: Some("custom"),
-    cache_dir: Some("~/.config/rmpc/cache"),
+    cache_dir: None,
     on_song_change: None,
     volume_step: 5,
-    max_fps: 30,
+    max_fps: 60,
     scrolloff: 0,
     wrap_navigation: false,
     enable_mouse: true,
