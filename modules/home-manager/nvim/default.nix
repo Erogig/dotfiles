@@ -3,12 +3,13 @@
 {
     programs.neovim = {
         enable = true;
-        package = inputs.neovim-nightly-overlay.packages.${pkgs.stdenv.hostPlatform.system}.default;
+        withRuby = false;
         withNodeJs = true;
         withPython3 = true;
         extraPackages = [
             pkgs.ripgrep
             pkgs.unzipNLS
+            #pkgs.tree-sitter
         ];
         plugins = [
             pkgs.vimPlugins.sqlite-lua

@@ -15,11 +15,6 @@
         };
 
         nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-
-        neovim-nightly-overlay = {
-            url = "github:nix-community/neovim-nightly-overlay";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
     };
 
     outputs = { self, nixpkgs, stylix, nixos-hardware, ... }@inputs: {
