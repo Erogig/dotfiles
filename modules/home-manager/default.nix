@@ -29,4 +29,5 @@
     hyprshot = import ./hyprshot;
     clipse = import ./clipse;
     kdeconnect = import ./kdeconnect;
+    bitwarden = import ./bitwarden;
 }
