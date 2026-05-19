@@ -14,6 +14,8 @@
             "browser.tabs.closeWindowWithLastTab" = false;
             "browser.startup.homepage" = "https://ha.erogig.net?kiosk";
             "privacy.clearOnShutdown_v2.cookiesAndStorage" = false;
+            "media.videocontrols.picture-in-picture.enabled" = false;
+            "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
         };
         # https://firefox-admin-docs.mozilla.org/reference/policies
         # ToDo https://github.com/bitbloxhub/nixos-config/blob/4c0aa9afdd878ba5542a7176d8a69e836aa944ac/modules/firefox/darkreader.nix
@@ -45,6 +47,9 @@
         profiles.default = {
             id = 0;
             extensions.force = true;
+            userChrome = ''
+            #TabsToolbar { visibility: collapse !important; }
+            '';
         };
     };
 
