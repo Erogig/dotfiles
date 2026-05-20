@@ -49,6 +49,14 @@
             extensions.force = true;
             userChrome = ''
             #TabsToolbar { visibility: collapse !important; }
+            #nav-bar { visibility: collapse !important; }
+            #urlbar { visibility: collapse !important; }
+
+            #navigator-toolbox:focus-within > #nav-bar,
+            #nav-bar:has(*:is([open],[focus-within])),
+            #nav-bar:has(#urlbar:is([open],[focus-within])) {
+                visibility: visible !important;
+            }
             '';
         };
     };
