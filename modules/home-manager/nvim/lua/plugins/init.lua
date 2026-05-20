@@ -2,7 +2,7 @@
 -- require "plugins/_catppuccin"
 require "plugins/_lsp"
 require "plugins/_tree_sitter"
-require "plugins/_coq"
+-- require "plugins/_coq"
 require "plugins/_nvim-autopairs"
 require "plugins/_comment"
 require "plugins/_telescope"

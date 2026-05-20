@@ -1,8 +1,8 @@
 { ... }:
 
 {
-programs.bash = {
-    enable = true;
-    initExtra = "fish; exit";
+    programs.bash = {
+        enable = true;
+        initExtra = "fish; exit";
     };
 }
