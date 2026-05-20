@@ -3,6 +3,6 @@
 {
 programs.bash = {
     enable = true;
-    initExtra = "fish";
+    initExtra = "fish; exit";
     };
 }
