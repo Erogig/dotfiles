@@ -22,6 +22,7 @@
         steam
         pam
         wireguard
+        fingerprint
         ] ++ [
         ./hardware-configuration.nix
         ../home-manager/home-manager.nix
@@ -37,6 +38,6 @@
     users.users.erogig = {
         isNormalUser = true;
         description = "Erogig";
-        extraGroups = [ "networkmanager" "wheel" ];
+        extraGroups = [ "networkmanager" "wheel" "docker" ];
     };
 }

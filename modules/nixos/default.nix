@@ -16,4 +16,5 @@
     steam = import ./steam.nix;
     pam = import ./pam.nix;
     wireguard = import ./wireguard.nix;
+    fingerprint = import ./fingerprint.nix;
 }

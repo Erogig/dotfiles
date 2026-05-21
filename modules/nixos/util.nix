@@ -7,5 +7,9 @@
         brightnessctl
         playerctl
         bind
+        yarn
     ];
+
+    programs.npm.enable = true;
+    virtualisation.docker.enable = true;
 }
