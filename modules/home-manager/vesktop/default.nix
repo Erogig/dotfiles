@@ -7,6 +7,7 @@ programs.vesktop = {
         discordBranch = "stable";
         minimizeToTray = "false";
         arRPC = "false";
+        enableSplashScreen = "false";
         };
     };
 }
