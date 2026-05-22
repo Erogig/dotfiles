@@ -10,8 +10,8 @@
         imageDisplay.type = "kitty";
     };
 
-    xdg.configFile."hypr/hyprland/clipse.conf" = {
-        source = ./clipse.conf;
+    xdg.configFile."hypr/hyprland/clipse.lua" = {
+        source = ./clipse.lua;
         force = true;
     };
 }
