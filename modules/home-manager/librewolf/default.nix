@@ -39,6 +39,12 @@
                     default_area = "navbar";
                     private_browsing = true;
                 };
+                "sponsorBlocker@ajay.app" = {
+                    installation_mode = "normal_installed";
+                    install_url = "https://addons.mozilla.org/firefox/downloads/latest/sponsorBlocker@ajay.app/latest.xpi";
+                    default_area = "menupanel";
+                    private_browsing = true;
+                };
             };
             "3rdparty".Extensions = {
                 "uBlock0@raymondhill.net".adminSettings = builtins.fromJSON( builtins.readFile ./ublock.txt );
