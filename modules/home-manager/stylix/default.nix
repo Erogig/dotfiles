@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
     stylix.fonts = {
@@ -19,4 +19,6 @@
             name = "Noto Color Emoji";
         };
     };
+
+    gtk.gtk4.theme = config.gtk.theme;
 }
