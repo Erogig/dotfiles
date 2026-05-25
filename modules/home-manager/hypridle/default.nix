@@ -14,7 +14,7 @@
             listener = [
                 {
                     timeout = 270;
-                    on-timeout = "notify-send \"Your are idle!\"";
+                    on-timeout = "notify-send \"You are idle!\"";
                 }
                 {
                     timeout = 300;
