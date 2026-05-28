@@ -7,7 +7,7 @@
 hl.bind("SUPER + Z", hl.dsp.exec_cmd("pkill -SIGUSR1 waybar"))
 
 -- Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
-hl.bind("SUPER + RETURN", hl.dsp.exec_cmd("kitty"))
+hl.bind("SUPER + RETURN", hl.dsp.exec_cmd("kitty fish"))
 hl.bind("SUPER + Q", hl.dsp.window.close())
 hl.bind("SUPER + CONTROL + Q", hl.dsp.window.kill())
 hl.bind("SUPER + C", hl.dsp.window.float())
