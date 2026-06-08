@@ -32,4 +32,6 @@
     bitwarden = import ./bitwarden;
     mpd = import ./mpd;
     rmpc = import ./rmpc;
+    vscode = import ./vscode;
+    remmina = import ./remmina;
 }
