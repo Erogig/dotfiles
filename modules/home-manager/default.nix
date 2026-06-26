@@ -34,4 +34,5 @@
     rmpc = import ./rmpc;
     vscode = import ./vscode;
     remmina = import ./remmina;
+    prismlauncher = import ./prismlauncher;
 }

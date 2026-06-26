@@ -23,7 +23,7 @@ hl.bind("SUPER + CONTROL + SHIFT + S", hl.dsp.exec_cmd("hyprshot -m region --fre
 
 -- Fullscreen
 hl.bind("SUPER + F", hl.dsp.window.fullscreen())
-hl.bind("SUPER + F", hl.dsp.window.fullscreen("maximized"))
+hl.bind("SUPER + SHIFT + F", hl.dsp.window.fullscreen("maximized"))
 
 -- Move focus
 hl.bind("SUPER + H", hl.dsp.focus({ direction = "left" }))

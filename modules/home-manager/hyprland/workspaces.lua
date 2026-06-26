@@ -24,7 +24,7 @@ hl.window_rule({
 hl.workspace_rule({
     workspace = "name:discord",
     persistent = true,
-    monitor = "eDP-1",
+    monitor = "desc:Fujitsu Siemens Computers GmbH L24T-1 LED",
     default = true,
 })
 hl.workspace_rule({
