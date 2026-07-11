@@ -52,4 +52,11 @@ hl.monitor({
     scale = 1,
 })
 
+hl.monitor({
+    output = "desc:WAM VXD-G324KP demoset-1",
+    mode = "1920x1080@60",
+    position = "auto-right",
+    scale = 1,
+})
+
 hl.monitor({ output = "", mode = "preferred", position = "auto", scale = 1 })
