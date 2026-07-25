@@ -9,6 +9,10 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
 
+        flake-parts.url = "github:hercules-ci/flake-parts";
+
+        import-tree.url = "github:vic/import-tree";
+
         stylix = {
             url = "github:nix-community/stylix";
             inputs.nixpkgs.follows = "nixpkgs";
@@ -17,19 +21,5 @@
         nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     };
 
-    outputs = { self, nixpkgs, stylix, nixos-hardware, ... }@inputs: {
-        # use "nixos", or your hostname as the name of the configuration
-        # it's a better practice than "default" shown in the video
-        nixosModules = import ./modules/nixos;
-        homeManagerModules = import ./modules/home-manager;
-
-        nixosConfigurations.sidhe = nixpkgs.lib.nixosSystem {
-            specialArgs = {inherit inputs; nixosModules = self.nixosModules; homeManagerModules = self.homeManagerModules; };
-            modules = [
-                stylix.nixosModules.stylix
-                ./nixos/configuration.nix
-                nixos-hardware.nixosModules.dell-xps-15-9530-nvidia
-            ];
-        };
-    };
+      outputs = inputs: inputs.flake-parts.lib.mkFlake {inherit inputs;} (inputs.import-tree ./modules);
 }

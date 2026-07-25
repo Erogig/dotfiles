@@ -1,0 +1,46 @@
+{
+  "timeStamp": 1776090878605,
+  "version": "1.70.0",
+  "userSettings": {
+    "externalLists": "https://raw.githubusercontent.com/gijsdev/ublock-hide-yt-shorts/master/list.txt",
+    "importedLists": [
+      "https://raw.githubusercontent.com/gijsdev/ublock-hide-yt-shorts/master/list.txt"
+    ],
+    "popupPanelSections": 31
+  },
+  "selectedFilterLists": [
+    "user-filters",
+    "ublock-filters",
+    "ublock-badware",
+    "ublock-privacy",
+    "ublock-quick-fixes",
+    "ublock-unbreak",
+    "easylist",
+    "easyprivacy",
+    "urlhaus-1",
+    "plowe-0",
+    "fanboy-cookiemonster",
+    "ublock-cookies-easylist",
+    "adguard-cookies",
+    "ublock-cookies-adguard",
+    "easylist-chat",
+    "easylist-newsletters",
+    "easylist-notifications",
+    "easylist-annoyances",
+    "adguard-mobile-app-banners",
+    "adguard-other-annoyances",
+    "adguard-popup-overlays",
+    "adguard-widgets",
+    "ublock-annoyances",
+    "https://raw.githubusercontent.com/gijsdev/ublock-hide-yt-shorts/master/list.txt"
+  ],
+  "hiddenSettings": {},
+  "whitelist": [
+    "chrome-extension-scheme",
+    "moz-extension-scheme"
+  ],
+  "dynamicFilteringString": "behind-the-scene * * noop\nbehind-the-scene * inline-script noop\nbehind-the-scene * 1p-script noop\nbehind-the-scene * 3p-script noop\nbehind-the-scene * 3p-frame noop\nbehind-the-scene * image noop\nbehind-the-scene * 3p noop",
+  "urlFilteringString": "",
+  "hostnameSwitchesString": "no-large-media: behind-the-scene false\nno-csp-reports: * true",
+  "userFilters": "youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.web_enable_ab_rsp_cl, false)\n\n! Nov 29, 2025 https://www.youtube.com\nwww.youtube.com##ytd-guide-section-renderer.ytd-guide-renderer.style-scope:nth-of-type(4)\nwww.youtube.com##ytd-guide-section-renderer.ytd-guide-renderer.style-scope:nth-of-type(5)\nwww.youtube.com###section-items > ytd-guide-entry-renderer.ytd-guide-collapsible-section-entry-renderer.style-scope > .ytd-guide-entry-renderer.style-scope.yt-simple-endpoint:has(yt-formatted-string:has-text(/^Your videos$/i))\nwww.youtube.com###expander-item > .ytd-guide-entry-renderer.style-scope.yt-simple-endpoint:has(yt-formatted-string:has-text(/^Show more$/i))\n\n! Dec 3, 2025 https://www.youtube.com\nwww.youtube.com##ytd-rich-section-renderer.ytd-rich-grid-renderer.style-scope:nth-of-type(3)\n\n! Dec 6, 2025 https://www.youtube.com\nwww.youtube.com##.ytdChipsShelfWithVideoShelfRendererHost > div\n\n! Dec 14, 2025 https://www.youtube.com\nwww.youtube.com##ytd-rich-section-renderer.ytd-rich-grid-renderer.style-scope\n\n! Jan 2, 2026 https://www.reddit.com\nwww.reddit.com##.nd\\:visible > faceplate-expandable-section-helper > .rounded-none.border-none.bg-transparent.m-0.p-0\nwww.reddit.com##hr.border-neutral-border-weak.my-sm.w-100:nth-of-type(2)"
+}
