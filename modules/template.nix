@@ -1,15 +1,19 @@
 { ... }: {
-  flake.nixosModules.MODULENAME = {
-    pkgs,
-    ...
-  }: {
-    
-  };
+  flake.nixosModules.MODULENAME =
+    {
+      pkgs,
+      ...
+    }:
+    {
 
-  flake.homeModules.MODULENAME = {
-    pkgs,
-    ...
-  }: {
-    
-  };
+    };
+
+  flake.homeModules.MODULENAME =
+    {
+      pkgs,
+      ...
+    }:
+    {
+
+    };
 }

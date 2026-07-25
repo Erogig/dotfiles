@@ -1,15 +1,19 @@
 { ... }: {
-  flake.nixosModules.hyprpolkitagent = {
-    pkgs,
-    ...
-  }: {
-    
-  };
+  flake.nixosModules.hyprpolkitagent =
+    {
+      pkgs,
+      ...
+    }:
+    {
 
-  flake.homeModules.hyprpolkitagent = {
-    pkgs,
-    ...
-  }: {
-    services.hyprpolkitagent.enable = true;
-  };
+    };
+
+  flake.homeModules.hyprpolkitagent =
+    {
+      pkgs,
+      ...
+    }:
+    {
+      services.hyprpolkitagent.enable = true;
+    };
 }

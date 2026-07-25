@@ -1,25 +1,29 @@
 { ... }: {
-  flake.nixosModules.rmpc = {
-    pkgs,
-    ...
-  }: {
-    
-  };
+  flake.nixosModules.rmpc =
+    {
+      pkgs,
+      ...
+    }:
+    {
 
-  flake.homeModules.rmpc = {
-    pkgs,
-    ...
-  }: {
-    programs.rmpc = {
-      enable = true;
-      config = builtins.readFile ./config.ron;
     };
 
-    xdg.configFile."rmpc/themes/custom.ron" = {
-      source = ./custom.ron;
-      force = true;
-    };
+  flake.homeModules.rmpc =
+    {
+      pkgs,
+      ...
+    }:
+    {
+      programs.rmpc = {
+        enable = true;
+        config = builtins.readFile ./config.ron;
+      };
 
-    programs.cava.enable = true;
-  };
+      xdg.configFile."rmpc/themes/custom.ron" = {
+        source = ./custom.ron;
+        force = true;
+      };
+
+      programs.cava.enable = true;
+    };
 }

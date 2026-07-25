@@ -1,39 +1,43 @@
 { ... }: {
-  flake.nixosModules.sway-audio-idle-inhibit = {
-    pkgs,
-    ...
-  }: {
-    
-  };
+  flake.nixosModules.sway-audio-idle-inhibit =
+    {
+      pkgs,
+      ...
+    }:
+    {
 
-  flake.homeModules.sway-audio-idle-inhibit = {
-    pkgs,
-    lib,
-    ...
-  }: {
-    home.packages = with pkgs; [
-      sway-audio-idle-inhibit
-    ];
+    };
 
-    systemd.user.services.sway-audio-idle-inhibit = {
-      Unit = {
-        Description = "SwayAudioIdleInhibit daemon";
-        Documentation = [ "https://github.com/ErikReider/SwayAudioIdleInhibit" ];
-        PartOf = [ "graphical-session.target" ];
-        After = [ "graphical-session.target" ];
-        # ConditionEnvironment requires systemd v247 to work correctly
-        ConditionEnvironment = "WAYLAND_DISPLAY";
-      };
+  flake.homeModules.sway-audio-idle-inhibit =
+    {
+      pkgs,
+      lib,
+      ...
+    }:
+    {
+      home.packages = with pkgs; [
+        sway-audio-idle-inhibit
+      ];
 
-      Service = {
-        Type = "exec";
-        ExecStart = "${lib.getExe pkgs.sway-audio-idle-inhibit}";
-        Restart = "always";
-      };
+      systemd.user.services.sway-audio-idle-inhibit = {
+        Unit = {
+          Description = "SwayAudioIdleInhibit daemon";
+          Documentation = [ "https://github.com/ErikReider/SwayAudioIdleInhibit" ];
+          PartOf = [ "graphical-session.target" ];
+          After = [ "graphical-session.target" ];
+          # ConditionEnvironment requires systemd v247 to work correctly
+          ConditionEnvironment = "WAYLAND_DISPLAY";
+        };
 
-      Install = {
-        WantedBy = [ "graphical-session.target" ];
+        Service = {
+          Type = "exec";
+          ExecStart = "${lib.getExe pkgs.sway-audio-idle-inhibit}";
+          Restart = "always";
+        };
+
+        Install = {
+          WantedBy = [ "graphical-session.target" ];
+        };
       };
     };
-  };
 }

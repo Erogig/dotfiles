@@ -1,48 +1,49 @@
 { self, inputs, ... }:
 let
-  modules = moduleSet: with moduleSet; [
-    audio
-    bash
-    batsignal
-    # bitwarden
-    bootloader
-    btop
-    clipse
-    dunst
-    fingerprint
-    fish
-    gh
-    git
-    greetd
-    hyprcursor
-    hypridle
-    hyprland
-    hyprlock
-    hyprpaper
-    hyprpolkitagent
-    hyprshot
-    kdeconnect
-    kitty
-    librewolf
-    mpd
-    nautilus
-    networkmanager
-    nvim
-    printing
-    prismlauncher
-    remmina
-    rmpc
-    rofi
-    steam
-    stylix
-    sway-audio-idle-inhibit
-    syshud
-    util
-    vesktop
-    vscode
-    waybar
-    wireguard
-  ];
+  modules =
+    moduleSet: with moduleSet; [
+      audio
+      bash
+      batsignal
+      # bitwarden
+      bootloader
+      btop
+      clipse
+      dunst
+      fingerprint
+      fish
+      gh
+      git
+      greetd
+      hyprcursor
+      hypridle
+      hyprland
+      hyprlock
+      hyprpaper
+      hyprpolkitagent
+      hyprshot
+      kdeconnect
+      kitty
+      librewolf
+      mpd
+      nautilus
+      networkmanager
+      nvim
+      printing
+      prismlauncher
+      remmina
+      rmpc
+      rofi
+      steam
+      stylix
+      sway-audio-idle-inhibit
+      syshud
+      util
+      vesktop
+      vscode
+      waybar
+      wireguard
+    ];
 in
 {
   # This is your system configuration entry-point
@@ -60,7 +61,10 @@ in
     imports = (modules self.nixosModules) ++ [
       inputs.home-manager.nixosModules.default # import official home-manager NixOS module
     ];
-    nix.settings.experimental-features = [ "nix-command" "flakes" ];
+    nix.settings.experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
 
     nixpkgs.config.allowUnfree = true;
     system.stateVersion = "25.05"; # Do not change
@@ -88,7 +92,11 @@ in
 
     users.users.erogig = {
       isNormalUser = true;
-      extraGroups = [ "networkmanager" "wheel" "docker" ];
+      extraGroups = [
+        "networkmanager"
+        "wheel"
+        "docker"
+      ];
     };
     home-manager.users = {
       erogig = self.homeModules.erogigModule;
@@ -98,7 +106,7 @@ in
   };
 
   # This is your home.nix, your module where you configure home-manager
-  flake.homeModules.erogigModule = { pkgs, ...}: {
+  flake.homeModules.erogigModule = { pkgs, ... }: {
 
     imports = (modules self.homeModules) ++ [
     ];

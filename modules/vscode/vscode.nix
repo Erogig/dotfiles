@@ -1,15 +1,19 @@
 { ... }: {
-  flake.nixosModules.vscode = {
-    pkgs,
-    ...
-  }: {
-    
-  };
+  flake.nixosModules.vscode =
+    {
+      pkgs,
+      ...
+    }:
+    {
 
-  flake.homeModules.vscode = {
-    pkgs,
-    ...
-  }: {
-    programs.vscode.enable = true;
-  };
+    };
+
+  flake.homeModules.vscode =
+    {
+      pkgs,
+      ...
+    }:
+    {
+      programs.vscode.enable = true;
+    };
 }

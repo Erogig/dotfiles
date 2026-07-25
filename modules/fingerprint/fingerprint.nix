@@ -1,15 +1,19 @@
 { ... }: {
-  flake.nixosModules.fingerprint = {
-    pkgs,
-    ...
-  }: {
-    services.fprintd.enable = true;
-  };
+  flake.nixosModules.fingerprint =
+    {
+      pkgs,
+      ...
+    }:
+    {
+      services.fprintd.enable = true;
+    };
 
-  flake.homeModules.fingerprint = {
-    pkgs,
-    ...
-  }: {
-    
-  };
+  flake.homeModules.fingerprint =
+    {
+      pkgs,
+      ...
+    }:
+    {
+
+    };
 }

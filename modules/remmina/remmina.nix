@@ -1,17 +1,21 @@
 { ... }: {
-  flake.nixosModules.remmina = {
-    pkgs,
-    ...
-  }: {
-    
-  };
+  flake.nixosModules.remmina =
+    {
+      pkgs,
+      ...
+    }:
+    {
 
-  flake.homeModules.remmina = {
-    pkgs,
-    ...
-  }: {
-    home.packages = with pkgs; [
-      remmina
-    ];
-  };
+    };
+
+  flake.homeModules.remmina =
+    {
+      pkgs,
+      ...
+    }:
+    {
+      home.packages = with pkgs; [
+        remmina
+      ];
+    };
 }
