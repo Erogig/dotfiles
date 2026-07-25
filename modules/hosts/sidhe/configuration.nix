@@ -4,7 +4,7 @@ let
     audio
     bash
     batsignal
-    bitwarden
+    # bitwarden
     bootloader
     btop
     clipse
