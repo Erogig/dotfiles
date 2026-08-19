@@ -8,6 +8,7 @@
       environment.systemPackages = [
         pkgs.nautilus
       ];
+      services.udisks2.enable = true;
     };
 
   flake.homeModules.nautilus =
@@ -16,6 +17,8 @@
       ...
     }:
     {
-
+        services.udiskie = {
+          enable = true;
+        };
     };
 }
