@@ -6,6 +6,7 @@ let
       bash
       batsignal
       bitwarden
+      bluetooth
       bootloader
       btop
       clipse

@@ -19,12 +19,12 @@
       ];
 
       sshAuthSock = {
-          enable = true;
-          initialization = {
-            bash = "export SSH_AUTH_SOCK=$HOME/.bitwarden-ssh-agent.sock";
-            fish = "set -x SSH_AUTH_SOCK $HOME/.bitwarden-ssh-agent.sock";
-          };
-          systemd.socketProviderUnit = "";
+        enable = true;
+        initialization = {
+          bash = "export SSH_AUTH_SOCK=$HOME/.bitwarden-ssh-agent.sock";
+          fish = "set -x SSH_AUTH_SOCK $HOME/.bitwarden-ssh-agent.sock";
+        };
+        systemd.socketProviderUnit = "";
       };
     };
 }
