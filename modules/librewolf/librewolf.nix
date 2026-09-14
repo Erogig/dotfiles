@@ -68,13 +68,13 @@
           id = 0;
           extensions.force = true;
           userChrome = ''
-            #TabsToolbar { visibility: collapse !important; }
-            #nav-bar { visibility: collapse !important; }
-            #urlbar { visibility: collapse !important; }
+            toolbar#TabsToolbar.browser-toolbar.browser-titlebar { visibility: collapse !important; }
+            toolbar#nav-bar.browser-toolbar { visibility: collapse !important; }
+            moz-urlbar#urlbar.urlbar > .urlbar-input-container { height: auto !important; }
 
-            #navigator-toolbox:focus-within > #nav-bar,
-            #nav-bar:has(*:is([open],[focus-within])),
-            #nav-bar:has(#urlbar:is([open],[focus-within])) {
+            toolbox#navigator-toolbox.chrome-block:focus-within > toolbar#nav-bar.browser-toolbar,
+            toolbar#nav-bar.browser-toolbar:has(*:is([open],[focus-within])),
+            toolbar#nav-bar.browser-toolbar:has(#urlbar:is([open],[focus-within])) {
                 visibility: visible !important;
             }
           '';
