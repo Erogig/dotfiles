@@ -17,9 +17,9 @@
     {
       programs.rofi = {
         enable = true;
-        terminal = "kitty";
-        extraConfig = {
-          show-icons = true;
+        settings = {
+            terminal = "kitty";
+            show-icons = true;
         };
         theme =
           let
