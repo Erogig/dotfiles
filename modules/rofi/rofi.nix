@@ -10,8 +10,9 @@
 
   flake.homeModules.rofi =
     {
-      pkgs,
+      lib,
       config,
+      pkgs,
       ...
     }:
     {
@@ -85,6 +86,19 @@
               vertical-align = mkLiteral "0.5";
             };
           };
+      };
+      
+      wayland.windowManager.hyprland = {
+        settings = {
+          bind = [
+            {
+              _args = [
+                (lib.generators.mkLuaInline "mainMod .. \" + SUPER_L\"")
+                (lib.generators.mkLuaInline "hl.dsp.exec_cmd(\"pkill rofi || (pkill -SIGUSR1 waybar; rofi -show drun; pkill -SIGUSR1 waybar)\")")
+              ];
+            }
+          ];
+        };
       };
     };
 }

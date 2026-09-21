@@ -5,7 +5,7 @@
       ...
     }:
     {
-
+      programs.fish.enable = true;
     };
 
   flake.homeModules.fish =

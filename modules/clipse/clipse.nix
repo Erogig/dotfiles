@@ -10,6 +10,7 @@
 
   flake.homeModules.clipse =
     {
+      lib,
       pkgs,
       ...
     }:
@@ -23,9 +24,28 @@
         settings.imageDisplay.type = "kitty";
       };
 
-      xdg.configFile."hypr/hyprland/clipse.lua" = {
-        source = ./clipse.lua;
-        force = true;
+      wayland.windowManager.hyprland = {
+        settings = {
+          bind = [
+            {
+              _args = [
+                (lib.generators.mkLuaInline "mainMod .. \" + V\"")
+                (lib.generators.mkLuaInline "hl.dsp.exec_cmd(\"${pkgs.kitty}/bin/kitty --class clipse -e ${pkgs.clipse}/bin/clipse\")")
+              ];
+            }
+          ];
+
+          window_rule = [
+            {
+              match = {
+                class = "(clipse)";
+              };
+              float = true;
+              size = (lib.generators.mkLuaInline "{622, 652}");
+              stay_focused = true;
+            }
+          ];
+        };
       };
     };
 }

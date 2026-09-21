@@ -1,0 +1,286 @@
+[bar.default]
+auto_hide = true
+background_opacity = 0.89999997988343239
+border_width = 1.0
+capsule = true
+end = [ "media", "tray", "group:g1", "volume", "battery", "session" ]
+layer = "overlay"
+margin_edge = 15
+margin_ends = 250
+reserve_space = false
+show_on_workspace_switch = false
+start = []
+
+    [[bar.default.capsule_group]]
+    accordion = false
+    accordion_direction = "end"
+    enabled = true
+    fill = "surface_variant"
+    id = "g1"
+    members = [ "bluetooth", "network" ]
+    opacity = 1.0
+    padding = 6.0
+
+[battery.device."/org/freedesktop/UPower/devices/headphones_dev_E4_58_BC_C4_83_F4"]
+warning_threshold = 10
+
+[control_center]
+hidden_tabs = [ "weather", "calendar" ]
+
+    [[control_center.shortcuts]]
+    type = "wifi"
+
+    [[control_center.shortcuts]]
+    type = "bluetooth"
+
+    [[control_center.shortcuts]]
+    type = "caffeine"
+
+    [[control_center.shortcuts]]
+    type = "clipboard"
+
+    [[control_center.shortcuts]]
+    type = "media"
+
+[desktop_widgets]
+schema_version = 2
+widget_order = []
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget]
+
+[dock]
+background_opacity = 0.90000000000000002
+
+[idle]
+behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+pre_action_fade_seconds = 5
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = true
+    timeout = 600.0
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = false
+    timeout = 900.0
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = true
+    locked_timeout = 600.0
+    timeout = 1200.0
+
+[location]
+address = "Lund, Sweden"
+
+[lockscreen]
+blurred_desktop = true
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = [
+    "lockscreen-login-box@DP-6",
+    "lockscreen-login-box@DP-5",
+    "lockscreen-login-box@eDP-1",
+    "lockscreen-widget-0000000000000001",
+    "lockscreen-widget-0000000000000002",
+    "lockscreen-widget-0000000000000003"
+]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-5"]
+    box_height = 70.0
+    box_width = 400.0
+    cx = 960.0
+    cy = 761.0
+    output = "DP-5"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-5".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.90000000000000002
+        background_radius = 12.0
+        center_password_text = true
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "compact"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = false
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = false
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-6"]
+    box_height = 70.0
+    box_width = 400.0
+    cx = 1280.0
+    cy = 1011.0
+    output = "DP-6"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-6".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.90000000000000002
+        background_radius = 12.0
+        center_password_text = true
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "compact"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = false
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = false
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 70.0
+    box_width = 400.0
+    cx = 960.0
+    cy = 891.0
+    output = "eDP-1"
+    placement_height = 1200.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.90000000000000002
+        background_radius = 12.0
+        center_password_text = true
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "compact"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = false
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = false
+        show_weather = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
+    box_height = 448.0
+    box_width = 848.0
+    cx = 1280.0
+    cy = 640.0
+    output = "DP-6"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
+        background = false
+        clock_style = "digital"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000002]
+    box_height = 448.0
+    box_width = 848.0
+    cx = 960.0
+    cy = 520.0
+    output = "eDP-1"
+    placement_height = 1200.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000002.settings]
+        background = false
+        clock_style = "digital"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000003]
+    box_height = 368.0
+    box_width = 736.0
+    cx = 960.0
+    cy = 468.0
+    output = "DP-5"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000003.settings]
+        background = false
+        clock_style = "digital"
+
+[notification]
+background_opacity = 0.90000000000000002
+history_retention_hours = 24
+layer = "overlay"
+
+[osd]
+background_opacity = 0.89999997988343239
+position = "bottom_center"
+
+[shell]
+font_family = "Noto Sans"
+lang = "en"
+polkit_agent = true
+
+    [shell.launcher]
+    categories = false
+
+        [shell.launcher.providers.emoji]
+        prefix = "e"
+
+        [shell.launcher.providers.session]
+        global = true
+
+        [shell.launcher.providers.windows]
+        prefix = "w"
+
+    [shell.panel]
+    control_center_placement = "floating"
+    transparency_mode = "glass"
+
+    [shell.screenshot]
+    confirm_region = true
+    remember_last_region = true
+    save_to_file = false
+
+    [shell.window_switcher]
+    mru = true
+
+[system.monitor]
+enabled = false
+
+[theme]
+community_palette = "Oxocarbon"
+custom_palette = "stylix"
+mode = "dark"
+source = "custom"
+
+[wallpaper.default]
+path = "/nix/store/bpjhvvyp8lxywg020sm7fikk4zzdllv8-background.png"
+
+[widget.clock.actions]
+left = "panel-toggle control-center"
+
+[widget.control-center]
+enabled = false
+
+[widget.network]
+show_label = false
+vpn_status = "hidden"

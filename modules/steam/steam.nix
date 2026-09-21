@@ -32,10 +32,28 @@
 
   flake.homeModules.steam =
     {
+      lib,
       pkgs,
       ...
     }:
     {
-
+      wayland.windowManager.hyprland = {
+        settings = {
+          bind = [
+            {
+              _args = [
+                (lib.generators.mkLuaInline "mainMod .. \" + S\"")
+                (lib.generators.mkLuaInline "hl.dsp.focus({ workspace = \"name:steam\"})")
+              ];
+            }
+            {
+              _args = [
+                (lib.generators.mkLuaInline "mainMod .. \" + SHIFT + S\"")
+                (lib.generators.mkLuaInline "hl.dsp.window.move({ workspace = \"name:steam\"})")
+              ];
+            }
+          ];
+        };
+      };
     };
 }

@@ -10,6 +10,7 @@
 
   flake.homeModules.hyprlock =
     {
+      lib,
       pkgs,
       ...
     }:
@@ -59,6 +60,28 @@
               font_size = 18;
               position = "0, 100";
               valign = "bottom";
+            }
+          ];
+        };
+      };
+
+      wayland.windowManager.hyprland = {
+        settings = {
+          on = [
+            {
+              _args = [
+                "hyprland.start"
+                (lib.generators.mkLuaInline "function()\n  hl.exec_cmd(\"hyprlock\")\nend")
+              ];
+            }
+          ];
+
+          bind = [
+            {
+              _args = [
+                (lib.generators.mkLuaInline "mainMod .. \" + ESCAPE\"")
+                (lib.generators.mkLuaInline "hl.dsp.exec_cmd(\"hyprlock\")")
+              ];
             }
           ];
         };

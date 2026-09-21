@@ -19,13 +19,19 @@
         package = null;
         portalPackage = null;
         configType = "lua";
-        extraConfig = "require(\"hyprland.hyprland\")";
-      };
-
-      xdg.configFile."hypr/hyprland" = {
-        source = ./../hyprland;
-        force = true;
-        recursive = true;
+        extraLuaFiles = {
+          "binds" = ./binds.lua;
+          "devices" = ./devices.lua;
+          "gestures" = ./gestures.lua;
+          "env" = ./env.lua;
+          "looks" = ./looks.lua;
+          "workspaces" = ./workspaces.lua;
+        };
+        settings = {
+          mainMod = {
+            _var = "SUPER";
+          };
+        };
       };
     };
 }

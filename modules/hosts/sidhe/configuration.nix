@@ -9,40 +9,41 @@ let
       bluetooth
       bootloader
       btop
-      clipse
-      dunst
+      #clipse
+      #dunst
       fingerprint
       fish
       gh
       git
       greetd
       hyprcursor
-      hypridle
+      #hypridle
       hyprland
-      hyprlock
-      hyprpaper
-      hyprpolkitagent
-      hyprshot
+      #hyprlock
+      #hyprpaper
+      #hyprpolkitagent
+      #hyprshot
       kdeconnect
       kitty
       librewolf
       mpd
       nautilus
       networkmanager
+      noctalia
       nvim
       printing
       prismlauncher
       remmina
       rmpc
-      rofi
+      #rofi
       steam
       stylix
       sway-audio-idle-inhibit
-      syshud
+      #syshud
       util
       vesktop
       vscode
-      waybar
+      #waybar
       wireguard
     ];
 in
@@ -98,6 +99,7 @@ in
         "wheel"
         "docker"
       ];
+      shell = pkgs.fish;
     };
     home-manager.users = {
       erogig = self.homeModules.erogigModule;

@@ -10,6 +10,7 @@
 
   flake.homeModules.librewolf =
     {
+      lib,
       pkgs,
       ...
     }:
@@ -90,5 +91,25 @@
         source = ./tridactylrc;
         force = true;
       };
+
+      wayland.windowManager.hyprland = {
+        settings = {
+          bind = [
+            {
+              _args = [
+                (lib.generators.mkLuaInline "mainMod .. \" + W\"")
+                (lib.generators.mkLuaInline "hl.dsp.focus({ workspace = \"name:browser\"})")
+              ];
+            }
+            {
+              _args = [
+                (lib.generators.mkLuaInline "mainMod .. \" + SHIFT + W\"")
+                (lib.generators.mkLuaInline "hl.dsp.window.move({ workspace = \"name:browser\"})")
+              ];
+            }
+          ];
+        };
+      };
+
     };
 }

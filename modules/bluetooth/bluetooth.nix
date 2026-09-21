@@ -10,7 +10,7 @@
         powerOnBoot = false;
       };
 
-      services.blueman.enable = true;
+      #services.blueman.enable = true;
 
     };
 
@@ -20,7 +20,7 @@
       ...
     }:
     {
-      services.blueman-applet.enable = true;
-      services.mpris-proxy.enable = true;
+      #services.blueman-applet.enable = true;
+      #services.mpris-proxy.enable = true;
     };
 }
