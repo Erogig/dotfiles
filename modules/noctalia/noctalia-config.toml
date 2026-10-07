@@ -1,25 +1,31 @@
-[bar.default]
-auto_hide = true
-background_opacity = 0.89999997988343239
-border_width = 1.0
-capsule = true
-end = [ "media", "tray", "group:g1", "volume", "battery", "session" ]
-layer = "overlay"
-margin_edge = 15
-margin_ends = 250
-reserve_space = false
-show_on_workspace_switch = false
-start = []
+[audio]
+enable_sounds = false
 
-    [[bar.default.capsule_group]]
-    accordion = false
-    accordion_direction = "end"
-    enabled = true
-    fill = "surface_variant"
-    id = "g1"
-    members = [ "bluetooth", "network" ]
-    opacity = 1.0
-    padding = 6.0
+[bar]
+order = [ "default" ]
+
+    [bar.default]
+    auto_hide = true
+    background_opacity = 0.89999997988343239
+    border_width = 1.0
+    capsule = true
+    end = [ "media", "tray", "status", "group:g1", "volume", "battery", "session" ]
+    layer = "overlay"
+    margin_edge = 15
+    margin_ends = 250
+    reserve_space = false
+    show_on_workspace_switch = false
+    start = []
+
+        [[bar.default.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        enabled = true
+        fill = "surface_variant"
+        id = "g1"
+        members = [ "bluetooth", "network" ]
+        opacity = 1.0
+        padding = 6.0
 
 [battery.device."/org/freedesktop/UPower/devices/headphones_dev_E4_58_BC_C4_83_F4"]
 warning_threshold = 10
@@ -81,11 +87,14 @@ address = "Lund, Sweden"
 
 [lockscreen]
 blurred_desktop = true
+transition = [ "disc" ]
+transition_duration = 500
 
 [lockscreen_widgets]
 enabled = true
 schema_version = 2
 widget_order = [
+    "lockscreen-login-box@DP-4",
     "lockscreen-login-box@DP-6",
     "lockscreen-login-box@DP-5",
     "lockscreen-login-box@eDP-1",
@@ -98,6 +107,33 @@ widget_order = [
     cell_size = 16
     major_interval = 4
     visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-4"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 898.0
+    output = "DP-4"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-4".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@DP-5"]
     box_height = 70.0
@@ -113,10 +149,10 @@ widget_order = [
         [lockscreen_widgets.widget."lockscreen-login-box@DP-5".settings]
         background_color = "surface_variant"
         background_opacity = 0.90000000000000002
-        background_radius = 12.0
+        background_radius = 32.0
         center_password_text = true
         input_opacity = 1.0
-        input_radius = 6.0
+        input_radius = 32.0
         layout = "compact"
         show_caps_lock = true
         show_keyboard_layout = true
@@ -140,10 +176,10 @@ widget_order = [
         [lockscreen_widgets.widget."lockscreen-login-box@DP-6".settings]
         background_color = "surface_variant"
         background_opacity = 0.90000000000000002
-        background_radius = 12.0
+        background_radius = 32.0
         center_password_text = true
         input_opacity = 1.0
-        input_radius = 6.0
+        input_radius = 32.0
         layout = "compact"
         show_caps_lock = true
         show_keyboard_layout = true
@@ -167,10 +203,10 @@ widget_order = [
         [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
         background_color = "surface_variant"
         background_opacity = 0.90000000000000002
-        background_radius = 12.0
+        background_radius = 32.0
         center_password_text = true
         input_opacity = 1.0
-        input_radius = 6.0
+        input_radius = 32.0
         layout = "compact"
         show_caps_lock = true
         show_keyboard_layout = true
@@ -234,6 +270,12 @@ layer = "overlay"
 background_opacity = 0.89999997988343239
 position = "bottom_center"
 
+[plugin_settings."aristides/udiskie"]
+manager_layer = "overlay"
+
+[plugins]
+enabled = []
+
 [shell]
 font_family = "Noto Sans"
 lang = "en"
@@ -284,3 +326,6 @@ enabled = false
 [widget.network]
 show_label = false
 vpn_status = "hidden"
+
+[widget.status]
+type = "aristides/udiskie:status"
