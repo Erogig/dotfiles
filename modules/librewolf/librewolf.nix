@@ -31,7 +31,7 @@
           "media.videocontrols.picture-in-picture.enabled" = false;
           "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
         };
-        # https://firefox-admin-docs.mozilla.org/reference/policies
+        # https://firefox-admin-docs.mozilla.org/reference/policies/
         # ToDo https://github.com/bitbloxhub/nixos-config/blob/4c0aa9afdd878ba5542a7176d8a69e836aa944ac/modules/firefox/darkreader.nix
         policies = {
           ExtensionSettings = {
