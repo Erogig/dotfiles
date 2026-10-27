@@ -40,6 +40,7 @@ let
       stylix
       sway-audio-idle-inhibit
       #syshud
+      opencode
       util
       vesktop
       vscode

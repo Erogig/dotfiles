@@ -1,0 +1,3 @@
+[submodule "modules/opencode/ai"]
+	path = modules/opencode/ai
+	url = https://github.com/esek/ai.git
