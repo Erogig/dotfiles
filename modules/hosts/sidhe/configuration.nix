@@ -74,6 +74,8 @@ in
 
     networking.hostName = "sidhe";
 
+    boot.kernelPackages = pkgs.linuxPackages_latest;
+
     time.timeZone = "Europe/Stockholm";
 
     i18n = {
