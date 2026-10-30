@@ -27,6 +27,7 @@
             _args = [
               (lib.generators.mkLuaInline "mainMod .. \" + SUPER_L\"")
               (lib.generators.mkLuaInline "hl.dsp.exec_cmd(\"${pkgs.noctalia}/bin/noctalia msg panel-toggle launcher\")")
+              { release = true; }
             ];
           }
           {
