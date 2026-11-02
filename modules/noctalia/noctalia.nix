@@ -32,6 +32,18 @@
           }
           {
             _args = [
+              (lib.generators.mkLuaInline "mainMod .. \" + CONTROL + S\"")
+              (lib.generators.mkLuaInline "hl.dsp.exec_cmd(\"${pkgs.noctalia}/bin/noctalia msg screenshot-fullscreen pick\")")
+            ];
+          }
+          {
+            _args = [
+              (lib.generators.mkLuaInline "mainMod .. \" + CONTROL + SHIFT + S\"")
+              (lib.generators.mkLuaInline "hl.dsp.exec_cmd(\"${pkgs.noctalia}/bin/noctalia msg screenshot-region\")")
+            ];
+          }
+          {
+            _args = [
               (lib.generators.mkLuaInline "mainMod .. \" + V\"")
               (lib.generators.mkLuaInline "hl.dsp.exec_cmd(\"${pkgs.noctalia}/bin/noctalia msg panel-toggle clipboard\")")
             ];

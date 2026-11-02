@@ -6,26 +6,34 @@ order = [ "default" ]
 
     [bar.default]
     auto_hide = true
-    background_opacity = 0.89999997988343239
-    border_width = 1.0
+    background_opacity = 0.0
     capsule = true
+    capsule_border = "outline_variant"
+    capsule_border_width = 2.0
+    capsule_opacity = 0.89999997988343239
+    capsule_padding = 10.0
+    capsule_thickness = 0.99999998137354851
+    compositor_blur = false
     end = [ "media", "tray", "status", "group:g1", "volume", "battery", "session" ]
     layer = "overlay"
-    margin_edge = 15
+    margin_edge = 7
     margin_ends = 250
     reserve_space = false
+    shadow = false
     show_on_workspace_switch = false
     start = []
 
         [[bar.default.capsule_group]]
         accordion = false
         accordion_direction = "end"
+        border = "outline_variant"
+        border_width = 2.0
         enabled = true
-        fill = "surface_variant"
+        fill = "surface_container"
         id = "g1"
         members = [ "bluetooth", "network" ]
-        opacity = 1.0
-        padding = 6.0
+        opacity = 0.89999997615814209
+        padding = 10.0
 
 [battery.device."/org/freedesktop/UPower/devices/headphones_dev_E4_58_BC_C4_83_F4"]
 warning_threshold = 10
@@ -122,7 +130,7 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@DP-4".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.88
         background_radius = 12.0
         center_password_text = false
@@ -149,7 +157,7 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@DP-5".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.90000000000000002
         background_radius = 32.0
         center_password_text = true
@@ -176,7 +184,7 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@DP-6".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.90000000000000002
         background_radius = 32.0
         center_password_text = true
@@ -203,7 +211,7 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@DP-7".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.88
         background_radius = 12.0
         center_password_text = false
@@ -230,7 +238,7 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@DP-8".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.88
         background_radius = 12.0
         center_password_text = false
@@ -257,7 +265,7 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.90000000000000002
         background_radius = 32.0
         center_password_text = true
