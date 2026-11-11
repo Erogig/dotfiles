@@ -104,6 +104,7 @@ in
       ];
       shell = pkgs.fish;
     };
+    home-manager.extraSpecialArgs = { inherit inputs; };
     home-manager.users = {
       erogig = self.homeModules.erogigModule;
     };

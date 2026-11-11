@@ -23,7 +23,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    self.submodules = true;
+    esek-ai = {
+        url = "github:esek/ai";
+        inputs.flake-parts.follows = "flake-parts";
+    };
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);

@@ -68,6 +68,26 @@
         "type": "github"
       }
     },
+    "esek-ai": {
+      "inputs": {
+        "flake-parts": [
+          "flake-parts"
+        ]
+      },
+      "locked": {
+        "lastModified": 1794405460,
+        "narHash": "sha256-1qX+UHSaQrJmv3CTXbtnwJGxhZ4PbLj8KWsS0XXpNKA=",
+        "owner": "esek",
+        "repo": "ai",
+        "rev": "d286a67d4cb1402f17794bbc25f43dbd445c95b9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "esek",
+        "repo": "ai",
+        "type": "github"
+      }
+    },
     "firefox-gnome-theme": {
       "flake": false,
       "locked": {
@@ -272,6 +292,7 @@
     },
     "root": {
       "inputs": {
+        "esek-ai": "esek-ai",
         "flake-parts": "flake-parts",
         "home-manager": "home-manager",
         "import-tree": "import-tree",
