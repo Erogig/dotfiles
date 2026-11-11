@@ -19,7 +19,7 @@
     {
       programs.kitty = {
         enable = true;
-        inherit (pkgs.kitty);
+        inherit (pkgs.kitty) ;
       };
 
       wayland.windowManager.hyprland = {

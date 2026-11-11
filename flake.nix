@@ -24,8 +24,8 @@
     };
 
     esek-ai = {
-        url = "github:esek/ai";
-        inputs.flake-parts.follows = "flake-parts";
+      url = "github:esek/ai";
+      inputs.flake-parts.follows = "flake-parts";
     };
   };
 

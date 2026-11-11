@@ -21,7 +21,12 @@
     {
       programs.opencode = {
         enable = true;
-        settings = builtins.fromJSON ( builtins.replaceStrings ["<token goes here>"] [(builtins.replaceStrings ["\n"] [""] (builtins.readFile /secrets/esek/opencode.key))] (builtins.readFile (ai-source + "/opencode-template.jsonc")) );
+        settings = builtins.fromJSON (
+          builtins.replaceStrings
+            [ "<token goes here>" ]
+            [ (builtins.replaceStrings [ "\n" ] [ "" ] (builtins.readFile /secrets/esek/opencode.key)) ]
+            (builtins.readFile (ai-source + "/opencode-template.jsonc"))
+        );
         agents = ai-source + "/agents";
         commands = ai-source + "/commands";
         cli = {

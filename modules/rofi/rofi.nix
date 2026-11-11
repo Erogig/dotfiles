@@ -19,8 +19,8 @@
       programs.rofi = {
         enable = true;
         settings = {
-            terminal = "kitty";
-            show-icons = true;
+          terminal = "kitty";
+          show-icons = true;
         };
         theme =
           let
@@ -87,7 +87,7 @@
             };
           };
       };
-      
+
       wayland.windowManager.hyprland = {
         settings = {
           bind = [
