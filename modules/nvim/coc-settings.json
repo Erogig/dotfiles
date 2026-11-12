@@ -1,0 +1,15 @@
+{
+  "suggest.noselect": true,
+  "suggest.localityBonus": true,
+  "suggest.snippetIndicator": "►",
+  "diagnostic.virtualText": true,
+  "diagnostic.checkCurrentLine": true,
+  "inlayHint.enable": true,
+  "inlayHint.enableParameter": true,
+  "signature.enable": true,
+  "codeLens.enable": true,
+  "outline.autoPreview": true,
+  "coc.preferences.bracketEnterImprove": true,
+  "coc.preferences.formatOnSave": true
+}
+
