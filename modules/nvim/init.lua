@@ -10,9 +10,5 @@ o.linebreak = true
 o.list = true
 o.listchars = 'trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂'
 
-o.expandtab = true
-
-o.clipboard = 'unnamedplus'
-
 o.ignorecase = true
 o.smartcase = true

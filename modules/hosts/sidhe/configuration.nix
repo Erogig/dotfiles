@@ -116,6 +116,7 @@ in
   flake.homeModules.erogigModule = { pkgs, ... }: {
 
     imports = (modules self.homeModules) ++ [
+      inputs.nixvim.homeModules.nixvim
     ];
 
     home.username = "erogig";

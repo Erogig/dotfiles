@@ -23,6 +23,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nixvim.url = "github:nix-community/nixvim";
+
     esek-ai = {
       url = "github:esek/ai";
       inputs.flake-parts.follows = "flake-parts";
