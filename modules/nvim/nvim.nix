@@ -25,6 +25,14 @@
         globals = {
           mapleader = " ";
         };
+        keymaps = [
+          {
+            mode = "n";
+            key = "<Leader><Leader>";
+            action = "<cmd>lua vim.diagnostic.open_float()<CR>";
+            options.silent = true;
+          }
+        ];
         opts = {
           termguicolors = true;
           number = true;
@@ -37,21 +45,42 @@
           ignorecase = true;
           smartcase = true;
           tabstop = 4;
+          softtabstop = -1;
           shiftwidth = 0;
           clipboard = "unnamedplus";
+          scrolloff = 10;
+          langmap = "å[,¨],ä',ö\\;,Å{,^},Ä\\\",Ö:,\"@,¤$,&^,/&,(*,)(,=),\'/,*?";
         };
         dependencies = {
           ripgrep.enable = true;
           fd.enable = true;
           git.enable = true;
           tree-sitter.enable = true;
+          curl.enable = true;
         };
         plugins = {
           comment.enable = true;
           telescope = {
             enable = true;
             extensions = {
-              frecency.enable = true;
+              frecency = {
+                enable = true;
+                settings = {
+                  show_unindexed = true;
+                  default_workspace = "CWD";
+                  auto_validate = true;
+                  ignore_patterns = [
+                    "*.git/*"
+                    "*/tmp/*"
+                    "term://*"
+                  ];
+                  workspaces = {
+                    c = "/home/erogig/dotfiles";
+                    ".c" = "/home/erogig/.config";
+                    esek = "/home/erogig/dev/esek";
+                  };
+                };
+              };
             };
             keymaps = {
               "<Leader>p" = "frecency";
@@ -59,6 +88,7 @@
               "<Leader>s" = "spell_suggest";
             };
           };
+          web-devicons.enable = true;
           treesitter = {
             enable = true;
             highlight.enable = true;
@@ -70,11 +100,22 @@
           lsp-format.enable = true;
           cmp = {
             enable = true;
-            settings.sources = [
-              { name = "nvim_lsp"; }
-              { name = "path"; }
-              { name = "dictionary"; }
-            ];
+            settings = {
+              sources = [
+                { name = "nvim_lsp"; }
+                { name = "path"; }
+                { name = "dictionary"; }
+              ];
+              preselect = "cmp.PreselectMode.Item";
+              mapping = {
+                "<Up>" = "cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select })";
+                "<Down>" = "cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select })";
+                "<Right>" = "cmp.mapping.confirm({ select = true })";
+              };
+              experimental = {
+                ghost_text = true;
+              };
+            };
           };
           nvim-autopairs.enable = true;
           guess-indent.enable = true;
