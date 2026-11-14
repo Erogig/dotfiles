@@ -31,11 +31,13 @@
     };
   };
 
-  outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } {
-    imports = [ (inputs.import-tree ./modules) ];
+  outputs =
+    inputs:
+    inputs.flake-parts.lib.mkFlake { inherit inputs; } {
+      imports = [ (inputs.import-tree ./modules) ];
 
-    perSystem = { pkgs, ... }: {
-      formatter = pkgs.nixfmt-tree;
+      perSystem = { pkgs, ... }: {
+        formatter = pkgs.nixfmt-tree;
+      };
     };
-  };
 }
