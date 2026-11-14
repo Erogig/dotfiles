@@ -9,42 +9,33 @@ let
       bluetooth
       bootloader
       btop
-      #clipse
-      #dunst
       fingerprint
       fish
       gh
       git
       greetd
       hyprcursor
-      #hypridle
       hyprland
-      #hyprlock
-      #hyprpaper
-      #hyprpolkitagent
-      #hyprshot
       kdeconnect
       kitty
       librewolf
       mpd
       nautilus
       networkmanager
+      nix
       noctalia
       nvim
       printing
       prismlauncher
       remmina
       rmpc
-      #rofi
       steam
       stylix
       sway-audio-idle-inhibit
-      #syshud
       opencode
       util
       vesktop
       vscode
-      #waybar
       wireguard
     ];
 in
@@ -53,7 +44,6 @@ in
   flake.nixosConfigurations.sidhe = inputs.nixpkgs.lib.nixosSystem {
     modules = [
       self.nixosModules.sidheModule
-      # self.nixosModules.homeManager
       inputs.stylix.nixosModules.stylix
       inputs.nixos-hardware.nixosModules.dell-xps-15-9530-nvidia
     ];
