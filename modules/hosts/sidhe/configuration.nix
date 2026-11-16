@@ -35,6 +35,7 @@ let
       opencode
       util
       vesktop
+      # vr
       vscode
       wireguard
     ];
